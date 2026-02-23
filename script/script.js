@@ -274,3 +274,9 @@ function checkEmptyState() {
     emptyRejected.classList.remove("hidden");
   }
 }
+
+// always select toggle all tab button
+
+window.onload = function () {
+  toggleButtonStyle("all-btn");
+};
