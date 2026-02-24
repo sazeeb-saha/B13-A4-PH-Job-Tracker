@@ -208,7 +208,7 @@ function renderInterview() {
   for (let interview of interviewListArr) {
     let div = document.createElement("div");
     div.className =
-      "card-dlt bg-white rounded-xl p-6 flex justify-between hover:border-blue-700 hover:border-l-4 hover:border-r-[1px] hover:border-y-[1px]  mb-4 ";
+      "card-dlt bg-white rounded-xl p-6 flex justify-between hover:border-green-500 hover:border-l-4 hover:border-r-[1px] hover:border-y-[1px]  mb-4 ";
 
     div.innerHTML = `
        <div>
@@ -240,7 +240,7 @@ function renderRejected() {
   for (let rejected of rejectedListArr) {
     let div = document.createElement("div");
     div.className =
-      "card-dlt bg-white rounded-xl p-6 flex justify-between hover:border-blue-700 hover:border-l-4 hover:border-r-[1px] hover:border-y-[1px]  mb-4 ";
+      "card-dlt bg-white rounded-xl p-6 flex justify-between hover:border-red-500 hover:border-l-4 hover:border-r-[1px] hover:border-y-[1px]  mb-4 ";
 
     div.innerHTML = `
        <div>
