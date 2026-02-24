@@ -45,6 +45,7 @@ Answer of all questions is given below:
 4. What is Event Delegation in JavaScript? Why is it useful?<br>
    Answer:<br>
    Event delegation is a JavaScript technique where a single event listener is attached to a parent element to handle events of its child elements using event bubbling.<br>
+   Event Delegation is useful for:<br>
 
 - Improves performance and memory efficiency
 - Makes code cleaner and easier to manage
