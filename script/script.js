@@ -54,11 +54,11 @@ function updateJobsCount() {
   }
 }
 
-//! call calculate count function
+// call calculate count function
 
 calculateCount();
 
-// *function for toggling button
+// function for toggling button
 
 function toggleButtonStyle(id) {
   // remove classlist
@@ -202,6 +202,8 @@ mainContainer.addEventListener("click", function (event) {
   }
 });
 
+// function for render Interview
+
 function renderInterview() {
   filterSectionInterview.innerHTML = "";
 
@@ -234,6 +236,8 @@ function renderInterview() {
     filterSectionInterview.appendChild(div);
   }
 }
+// function for render rejected
+
 function renderRejected() {
   filterSectionRejected.innerHTML = "";
 
@@ -266,6 +270,8 @@ function renderRejected() {
     filterSectionRejected.appendChild(div);
   }
 }
+
+// function for empty section show hide
 
 function checkEmptyState() {
   const emptyAll = document.getElementById("empty-all");
