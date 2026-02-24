@@ -42,6 +42,18 @@ function calculateCount() {
   rejectedCount.innerText = rejectedListArr.length;
 }
 
+// function for tab jobs count
+
+function updateJobsCount() {
+  if (allFilterBtn.classList.contains("btn-primary")) {
+    jobsCount.innerText = allCards.children.length;
+  } else if (interviewFilterBtn.classList.contains("btn-primary")) {
+    jobsCount.innerText = interviewListArr.length;
+  } else if (rejectedFilterBtn.classList.contains("btn-primary")) {
+    jobsCount.innerText = rejectedListArr.length;
+  }
+}
+
 //! call calculate count function
 
 calculateCount();
@@ -64,16 +76,20 @@ function toggleButtonStyle(id) {
     allCards.classList.add("hidden");
     filterSectionRejected.classList.add("hidden");
     filterSectionInterview.classList.remove("hidden");
+    // jobsCount.innerText = interviewListArr.length;
   } else if (id == "all-btn") {
     allCards.classList.remove("hidden");
     filterSectionInterview.classList.add("hidden");
     filterSectionRejected.classList.add("hidden");
+    // jobsCount.innerText = allCards.children.length;
   } else if (id == "rejected-btn") {
     allCards.classList.add("hidden");
     filterSectionInterview.classList.add("hidden");
     filterSectionRejected.classList.remove("hidden");
+    // jobsCount.innerText = rejectedListArr.length;
   }
   checkEmptyState();
+  updateJobsCount();
 }
 
 //* event delegation function
@@ -119,6 +135,7 @@ mainContainer.addEventListener("click", function (event) {
     renderInterview();
     renderRejected();
     checkEmptyState();
+    updateJobsCount();
   } else if (event.target.classList.contains("rejected-call")) {
     const parent = event.target.parentNode;
     const orgName = parent.querySelector(".org-name").innerText;
@@ -159,6 +176,7 @@ mainContainer.addEventListener("click", function (event) {
     renderRejected();
     renderInterview();
     checkEmptyState();
+    updateJobsCount();
   }
   const deleteBtn = event.target.closest(".delete-btn");
 
@@ -180,6 +198,7 @@ mainContainer.addEventListener("click", function (event) {
     renderInterview();
     renderRejected();
     checkEmptyState();
+    updateJobsCount();
   }
 });
 
